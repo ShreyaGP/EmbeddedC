@@ -10,7 +10,7 @@ void port()
     PORTD  &= ~(1<<PD2);  //HEATER interrupt
 
     EICRA |= (1<<ISC00);  //external interrupt control register
-    EIMSK |= (1<<INT0);  //ext interrupt mask register set for INT0
+    EIMSK |= (1<<INT0);  //ext interrupt mask register ,set for INT0
 
     sei();
 }

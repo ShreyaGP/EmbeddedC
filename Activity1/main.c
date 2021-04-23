@@ -2,21 +2,24 @@
 #include <util/delay.h>
 #include <avr/interrupt.h>
 
-unsigned volatile FLAG =0;
+#define LED (PORTB1)
+#define SEAT (PORTB0)
+
+unsigned volatile HEATER =0;
 
 int main(void)
 {
     port();
     sei();
     while(1){
-        if((PINB & (1<<PB0))){
-        if(FLAG==1){
-            PORTB  |= (1<<PB1);
+        if((PINB & (1<<SEAT))){
+        if(HEATER==1){
+            PORTB  |= (1<<LED);
             _delay_ms(1000);
-            FLAG=0;
+            HEATER=0;
             }
         else{
-            PORTB &= ~(1<<PB1);
+            PORTB &= ~(1<<LED);
             _delay_ms(100);
         }
         }
@@ -26,5 +29,5 @@ int main(void)
 
 ISR(INT0_vect)
 {
-    FLAG = 1;
+    HEATER = 1;
 }
