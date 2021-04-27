@@ -1,15 +1,27 @@
+/**
+ * @file Activity1_main.c
+ * @author Shreya
+ * @brief Activity1 main function to switch on LED whenever the seat is occupied and there is a change in heater interrupt
+ * @version 0.1
+ * @date 2021-04-27
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include <avr/io.h>
 #include <util/delay.h>
 #include <avr/interrupt.h>
 
 #define LED (PORTB1)
 #define SEAT (PORTB0)
+#define Heater_int (PORTD2)
 
 unsigned volatile HEATER =0;
 
 int main(void)
 {
-    port();
+    uint16_t temp;
+    pin_port();
+    InitADC();
     sei();
     while(1){
         if((PINB & (1<<SEAT))){
@@ -23,6 +35,8 @@ int main(void)
             _delay_ms(100);
         }
         }
+        temp=ReadADC(0);
+        _delay_ms(200);
     }
     return 0;
 }
