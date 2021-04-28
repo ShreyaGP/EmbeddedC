@@ -10,7 +10,7 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
-#define LED (PORTB1)
+#define LED (PORTB2)
 #define SEAT (PORTB0)
 #define Heater_int (PORTD2)
 
@@ -26,7 +26,7 @@ void pin_port()
     DDRD &= ~(1<<Heater_int); //clear bit
     PORTD  &= ~(1<<Heater_int);  //HEATER interrupt
 
-    EICRA |= (1<<ISC00);  //external interrupt control register
+    EICRA |= (3<<ISC00);  //external interrupt control register to make interrupt on rising edge
     EIMSK |= (1<<INT0);  //ext interrupt mask register set for INT0
 
     sei();

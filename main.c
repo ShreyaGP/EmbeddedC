@@ -11,7 +11,7 @@
 #include <util/delay.h>
 #include <avr/interrupt.h>
 
-#define LED (PORTB1)
+#define LED (PORTB2)
 #define SEAT (PORTB0)
 #define Heater_int (PORTD2)
 
@@ -22,6 +22,7 @@ int main(void)
     uint16_t temp;
     pin_port();
     InitADC();
+    PWM_pins();
     sei();
     while(1){
         if((PINB & (1<<SEAT))){
@@ -37,6 +38,7 @@ int main(void)
         }
         temp=ReadADC(0);
         _delay_ms(200);
+        PWM_output(temp);
     }
     return 0;
 }
