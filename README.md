@@ -4,6 +4,8 @@ Activity handling many sources connected together. LED is to be blinked whenever
 
 [![Compile-Linux](https://github.com/ShreyaGP/EmbeddedC/actions/workflows/compile.yml/badge.svg)](https://github.com/ShreyaGP/EmbeddedC/actions/workflows/compile.yml)
 
+[![Cppcheck](https://github.com/ShreyaGP/EmbeddedC/actions/workflows/code_quality.yml/badge.svg)](https://github.com/ShreyaGP/EmbeddedC/actions/workflows/code_quality.yml)
+
 Simulation images:
 
 ![image](https://user-images.githubusercontent.com/80441889/116573587-90eb6a80-a92a-11eb-963a-a2346a5ff8db.png)
