@@ -7,7 +7,6 @@ Activity handling many sources connected together. LED is to be blinked whenever
 
 [![Cppcheck](https://github.com/ShreyaGP/EmbeddedC/actions/workflows/code_quality.yml/badge.svg)](https://github.com/ShreyaGP/EmbeddedC/actions/workflows/code_quality.yml)
 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/e345a4120fe147ba97a38d5b21ff0963)](https://www.codacy.com/gh/ShreyaGP/EmbeddedC/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ShreyaGP/EmbeddedC&amp;utm_campaign=Badge_Grade)
 
 Simulation images:
 
