@@ -5,7 +5,6 @@
  * @version 0.1
  * @date 2021-04-28
  * @copyright Copyright (c) 2021
- * 
  */
 
 #include <avr/io.h>
@@ -20,7 +19,7 @@
 void PWM_pins()
 {
     TCCR1A|=(1<<COM1A1)|(3<<WGM10);  //TIMER 1 FAST PWM MODE
-    TCCR1B|=(5<<CS10)|(1<<WGM12);  //Prescaler=1024
+    TCCR1B|=(1<<CS12)|(1<<WGM12);  //Prescaler=256
     DDRB|=(1<<PWM);
 }
 

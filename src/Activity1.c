@@ -16,7 +16,6 @@
 
 /**
  * @brief A function to initialize the required port pins
- * 
  */
 void pin_port()
 {

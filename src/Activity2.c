@@ -5,7 +5,6 @@
  * @version 0.1
  * @date 2021-04-27
  * @copyright Copyright (c) 2021
- * 
  */
 
 #include <avr/io.h>
@@ -13,7 +12,6 @@
 
 /**
  * @brief Function to initialize ADC 
- * 
  */
 void InitADC()
 {
@@ -23,7 +21,6 @@ void InitADC()
 
 /**
  * @brief Function to set up ADC and get result
- * 
  * @param ch Input ADC channel number
  * @return uint16_t Final value after ADC conversion 
  */
