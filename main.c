@@ -10,6 +10,10 @@
 #include <avr/io.h>
 #include <util/delay.h>
 #include <avr/interrupt.h>
+#include "Activity1.h"
+#include "Activity2.h"
+#include "Activity3.h"
+#include "Activity4.h"
 
 #define LED (PORTB2)
 #define SEAT (PORTB0)
@@ -25,7 +29,7 @@ int main(void)
     pin_port();
     InitADC();
     PWM_pins();
-    Init_USART();
+    Init_USART(103);  //Baudrate=9600
     sei();
     while(1){
         if((PINB & (1<<SEAT))){   //To check if the seat is occupied

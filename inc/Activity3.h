@@ -12,8 +12,8 @@
 #ifndef ACTIVITY3_H_INCLUDED
 #define ACTIVITY3_H_INCLUDED
 
-PWM_pins();
+void PWM_pins();
 
-PWM_output(uint16_t);
+void PWM_output(uint16_t);
 
 #endif 
