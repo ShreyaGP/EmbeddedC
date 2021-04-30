@@ -46,6 +46,10 @@ analysis: $(SRC)
 # Analyse the code using Cppcheck command line utility
 	cppcheck --enable=all $^
 
+doc:
+	make -C documentation
+
 clean:
 # Remove all the build files and generated document files
 	rm -rf $(call FixPath,$(BUILD_DIR)/*)
+	make -C documentation clean

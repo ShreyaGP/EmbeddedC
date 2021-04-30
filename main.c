@@ -25,6 +25,7 @@ int main(void)
     pin_port();
     InitADC();
     PWM_pins();
+    Init_USART();
     sei();
     while(1){
         if((PINB & (1<<SEAT))){   //To check if the seat is occupied
